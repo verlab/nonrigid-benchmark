@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nonirigid_benchmark"
+dynamic = ["version"]
+license = {file = "LICENSE"}
+authors = [
+  { name="Felipe Cadar", email="nonirigid_benchmark@eucadar.com" },
+]
+description = "A small package for evaluating matches"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
+]
+
+dependencies = [
+  "opencv-python",
+  "opencv-contrib-python",
+  "numpy",
+  "tqdm",
+  "matplotlib",
+  "scikit-learn",
+  "easy_local_features",
+  "thinplate @ git+https://github.com/cheind/py-thin-plate-spline"
+]
+
+
+# define a script entry point
+[project.scripts]
+evaluate = "src.nonrigid_benchmark.evaluate:main"
+
+[project.urls]
+Homepage = "https://github.com/felipecadar/nonrigid-correspondence-benchmark"
+Issues = "https://github.com/felipecadar/nonrigid-correspondence-benchmark/issues"

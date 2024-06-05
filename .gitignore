@@ -1,0 +1,12 @@
+assets/SIFT_1024_BFMatcher/
+*.pyc
+*.egg-info
+**/test_multiple_obj/*.json
+**/test_scale/*.json
+**/test_single_obj/*.json
+.env
+experiments.csv
+plots/
+visualizations/
+plots_*/
+results/

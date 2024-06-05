@@ -1,0 +1,4 @@
+opencv-python>=4.9.0
+numpy
+tqdm
+scikit-learn
