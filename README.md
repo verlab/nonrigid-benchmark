@@ -15,23 +15,15 @@ If you want to train or finetune your method, you can download our training sets
 
 Also, if you want to generate even more data, or a more specilized one, you're in luck! We have made available the code to generate the data, but you will need to take a look at the this other readme file [here (Soon)](data_generation/README.md).
 
-## Installation
+## Intructions for submitting results
 
-You dont actually need to install the package to submit results to the benchmark. Nevertheless, you can install the package to use some of the provided utilities like evaluation code and baseline methods.
+If you want measure your methods performance on our benchmark, you can follow the general steps below:
+  1. Download the desired test data (Multiple Objects, Single Object, or Scale) using the provided links. [[Download Data Section]](#download-data)
+  2. Use the `selected_pairs.json` file to get the pairs of images to be used for evaluation. [[Data Structure Section]](#data-structure)
+  3. Save the keypoints and matches in a `.json` file with the name of the split, like `scale_1.json`. [[Benchmark submission file formart Section]](#benchmark-submission-file-formart)
+  4. Go to the evaluation webpage at [benchmark.eucadar.com](https://benchmark.eucadar.com) and submit your results. [[Submitting Results Section]](#submitting-results)
 
-To install the package locally, clone and then run the following command in the root directory of the repository:
-
-```bash
-git clone https://github.com/felipecadar/nonrigid-benchmark.git
-cd nonrigid-benchmark
-
-# maybe create your conda env here
-conda create -n nrbench python=3.9
-conda activate nrbench
-
-pip install .
-```
-
+The whole process is very simple and we provide some utilities to help you evaluate your method. You can find them in the [Some tools to help you Section](#some-tools-to-help-you).
 
 ## Download Data
 
@@ -48,6 +40,8 @@ wget -O test_single_obj.zip 'https://onedrive.live.com/download?resid=C3FEA201A5
 wget -O test_scale.zip  'https://onedrive.live.com/download?resid=C3FEA201A5BB0A9A%2165464&authkey=!AHh7E9BHGZeYYXc'
 
 ```
+
+
 
 ### Data Structure
 
@@ -99,7 +93,7 @@ The selected pairs file follows the following format:
 
 When saving the results, the split name should be the name of your file.
 
-## Evaluating your method
+## Benchmark submission file formart
 
 Evaluation is easy! You can use the `select_pairs.json` file to get the pairs of images, and just save the keypoints and matches in a `.json` file.
 
@@ -161,6 +155,24 @@ After logging in, the submission page will be available. You can submit your res
 
 Here is a screenshot of the submission page:
 ![submit](assets/doc/submission.png)
+
+
+## Some tools to help you
+
+You dont actually need to install the package to submit results to the benchmark. Nevertheless, you can install the package to use some of the provided utilities like evaluation code and baseline methods.
+
+To install the package locally, clone and then run the following command in the root directory of the repository:
+
+```bash
+git clone https://github.com/verlab/nonrigid-benchmark.git
+cd nonrigid-benchmark
+
+# maybe create your conda env here
+conda create -n nrbench python=3.9
+conda activate nrbench
+
+pip install .
+```
 
 
 
