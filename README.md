@@ -110,7 +110,7 @@ The output file should have the name of the split, like `scale_1.json`, and the 
 ]
 ```
 
-We have provided a some utilities to help you evaluate your method. Like this eval loop:
+We have provided a some utilities to help you evaluate your method. Like this eval loop here: [eval_loop](src/nonrigid_benchmark/utils.py#L61).
 
 ```python
 def eval_loop(benchmark_path, predictions_path, match_fn, datasets = ['test_single_obj', 'test_multiple_obj', 'test_scale']):
